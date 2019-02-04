@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+/*
+ * hwk2a - returns 1 if value contains an odd number of 1's
+ * Examples: hwk2a(5) = 0, hwk2a(7) = 1
+ * Legal ops: ! ~ & ^ | + << >>
+*/
+int hwk2a(int value){
+    int val = value ^ (value>>1);
+
+    val = val ^ (val>>2);
+    val = val ^ (val>>4);
+    val = val ^ (val>>8);
+    val = val ^ (val>>16);
+
+    val = val & 1;
+
+    return 2;
+}
